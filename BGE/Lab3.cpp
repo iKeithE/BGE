@@ -46,6 +46,39 @@ void Lab3::Update(float timeDelta)
 	{
 		ship2->transform->position -= ship2->transform->look * speed * timeDelta;
 	}
+
+	if (keyState[SDL_SCANCODE_LEFT])
+	{
+		ship2->transform->Yaw(timeDelta * speed * speed);
+	}
+
+	if (keyState[SDL_SCANCODE_RIGHT])
+	{
+		ship2->transform->Yaw(-timeDelta * speed * speed);
+	}
+
+	//Movement of ship1
+	if (keyState[SDL_SCANCODE_U])
+	{
+		ship1->transform->position += ship1->transform->look * speed * timeDelta;
+	}
+	if (keyState[SDL_SCANCODE_J])
+	{
+		ship1->transform->position -= ship1->transform->look * speed * timeDelta;
+	}
+
+	if (keyState[SDL_SCANCODE_H])
+	{
+		ship1->transform->Yaw(timeDelta * speed * speed);
+	}
+
+	if (keyState[SDL_SCANCODE_K])
+	{
+		ship1->transform->Yaw(-timeDelta * speed * speed);
+	}
+
+
+
 	elapsed += timeDelta;
 
 
