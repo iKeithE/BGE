@@ -78,6 +78,25 @@ void Lab3::Update(float timeDelta)
 	}
 
 
+	//Check distance between ships
+	bool inRange;
+
+	glm::vec3 toShip = (ship1->transform->position - ship2->transform->position);
+
+
+	if (glm::length(toShip) < 5)
+	{
+		inRange = true;
+		//PrintMessage("In Range!");
+		cout << "In Range";
+
+	}
+	else
+	{
+		inRange = false;
+	}
+
+
 
 	elapsed += timeDelta;
 
