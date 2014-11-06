@@ -21,13 +21,13 @@ bool Lab6::Initialise()
 	std::shared_ptr<GameComponent> ground = make_shared<Ground>();
 	Attach(ground);	
 
-	ship1 = make_shared<GameComponent>();
+	ship1 = make_shared<GameComponent>(true);
 	ship1->Attach(Content::LoadModel("cobramk3", glm::rotate(glm::mat4(1), 180.0f, glm::vec3(0,1,0))));
 	ship1->transform->position = glm::vec3(-10, 2, -10);
 	ship1->Attach(make_shared<VectorDrawer>());
 	Attach(ship1);
 
-	ship2 = make_shared<GameComponent>();
+	ship2 = make_shared<GameComponent>(true);
 	ship2->Attach(Content::LoadModel("ferdelance", glm::rotate(glm::mat4(1), 180.0f, glm::vec3(0,1,0))));
 	ship2->Attach(make_shared<VectorDrawer>());
 	ship2->transform->diffuse= glm::vec3(1.0f,0.0f,0.0f);
@@ -95,22 +95,18 @@ void Lab6::Update(float timeDelta)
 		if (t > 1.0f)
 		{
 			t = 0.0f;
-			slerping = false;
+			slerping = false;//Spherical Linear Inperprilation
 		}
 	}
 
-
-	// Put code for ship1 here!!!
 	/*
-	// Solution to part 1
-	glm::vec3 toShip2 = ship2->position - ship1->position;
+	glm::vec3 toShip2 = ship2->transform->position - ship1->transform->position;
 	toShip2 = glm::normalize(toShip2);
 	glm::vec3 axis = glm::cross(Transform::basisLook, toShip2);
 	axis = glm::normalize(axis);
 	float theta = glm::acos(glm::dot(toShip2, Transform::basisLook));
-	ship1->orientation = glm::angleAxis(glm::degrees(theta), axis);
+	ship1->transform->orientation = glm::angleAxis(glm::degrees(theta), axis);
 	*/
-	// End code for ship 1	
 	Game::Update(timeDelta);
 
 }
