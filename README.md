@@ -1,13 +1,13 @@
 <h1>Games Development Assignment 1</h1>
 
-Name: Keith Eyre
+<p>Name: Keith Eyre
 Student No.: D11124850
 
 For my assignment I'm going to create an animatronic <bold>spider</bold>.
 I will be using:
 a cylinder for the body,
 a sphere for the head an eyes
-and rectangles for each of the eight legs.
+and rectangles for each of the eight legs.</p>
 
 <h2>Features</h2>
 It will mimic the walk of a realistic spider and walk under its own power using motors to drive the legs.
