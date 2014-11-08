@@ -16,4 +16,6 @@ It will scrunch up like a spider would when it's under threat.<br>
 <h2>Jazz Factor</h2>
 I hope to make it be able to sling a web to an above surface and hoist itself up it. I will use a skinny rectangle ejected from the rear of the spider and stick to a surface in 3D space (that I will create for this purpose) and depending on the angle, hoist itself up and animate the swinging physics as it climbs.
 
+http://i57.tinypic.com/2nhevis.jpg
+http://i58.tinypic.com/20tj900.jpg
 
