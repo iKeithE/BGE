@@ -116,7 +116,7 @@ void main()
   // initialize total lighting with ambient lighting
   vec3 totalLighting = vec3(scene_ambient) * vec3(frontMaterial.ambient);
  
-  for (int index = 0; index < numberOfLights; index++) // for all light sources
+  for (int index = 0; index < 1; index++) // for all light sources
     {
       if (0.0 == lights[index].position.w) // directional light?
         {
